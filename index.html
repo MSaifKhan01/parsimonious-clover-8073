@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-page</title>
+    <style>
+        .nav {
+            display: flex;
+            width: 100%;
+            height: 150px;
+            gap: 120px;
+            background: #232f3e;
+            margin: auto;
+        }
+
+        .for_query {
+            font-family: Open Sans Semibold;
+            font-size: 12px;
+            color: #000;
+            text-align: right;
+            padding-right: 20px;
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            height: 20px;
+            background: #f3f3f3;
+        }
+
+        .for_query>span {
+            color: #ff0000;
+
+        }
+
+        #logo {
+            display: flex;
+            max-width: 100%;
+            height: 100px;
+            margin-left: 50px;
+            margin-top: 25px;
+
+        }
+
+        .box1 {
+            display: grid;
+            grid-template-columns: 2;
+            width: 500px;
+            margin: 35px 0px 0px 40px;
+            height: 50px;
+
+
+        }
+
+        #catagory {
+            width: 22%;
+            height: 100%;
+            background: #e9611e;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: none;
+        }
+
+        #search {
+            width: 70%;
+            margin-left: -4px;
+            height: 95%;
+
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: none;
+
+
+        }
+
+        .box2 {
+            display: flex;
+        }
+
+        .signin {
+            display: flex;
+        }
+
+        .signin>img {
+            max-width: 60px;
+            height: 60px;
+            margin: 40px 0px 0px 40px;
+        }
+
+        .signin>a {
+            display: block;
+            max-width: 50px;
+            margin: 55px 0px 0px 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .track {
+            display: flex;
+        }
+
+        .track>img {
+            max-width: 60px;
+            height: 60px;
+            margin: 40px 0px 0px 40px;
+        }
+
+        .track>a {
+            display: block;
+            max-width: 50px;
+            margin: 55px 0px 0px 0px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .cart {
+            display: flex;
+            text-align: center;
+        }
+
+        .cart>img {
+            max-width: 60px;
+            height: 60px;
+            margin: 40px 0px 0px 40px;
+        }
+
+        .cart>div {
+            display: block;
+            max-width: 50px;
+            margin: 40px 10px 0px 10px;
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .cart span {
+            display: flex;
+            background-color: #f3f3f3;
+            color: black;
+            padding-left: 18px;
+            border-radius: 10px;
+        }
+
+        .store {
+            display: block;
+        }
+
+        .store>img {
+            max-width: 150px;
+            height: 120px;
+            margin-left: 45px;
+
+        }
+
+        .store>a {
+            display: flex;
+            margin-left: 60px;
+            text-decoration: none;
+            color: white;
+            margin-top: -30px;
+        }
+
+        .sidebar {
+            width: 20%;
+            color: #666;
+        }
+
+        .sidebar li:hover {
+            background: #525d62;
+            color: azure;
+        }
+
+        #main {
+            width: 100%;
+
+
+        }
+
+        .front {
+            display: flex;
+        }
+
+        #head {
+            display: grid;
+            grid-template-columns: repeat(4, 250px);
+            grid-template-rows: repeat(4, 100px);
+            width: fit-content;
+            margin-top: 10px;
+            gap: 10px;
+            margin-left: 260px;
+
+
+
+
+        }
+
+        #head :nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 5;
+
+
+        }
+
+        #head :nth-child(2) {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        #head :nth-child(3) {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        #head :nth-child(4) {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+
+        #head img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #otpimg {
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        #otpimg>img {
+            width: 5vw;
+            height: 5vh;
+        }
+
+        #otp input[type="submit"] {
+            height: 100%;
+            width: 15%;
+            border: none;
+            background-color: rgb(75, 75, 75);
+            color: white;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+
+        }
+
+        #otp p {
+            font-size: 70%;
+
+        }
+
+        #otp input[type="number"] {
+            width: 80%;
+            height: 100%;
+            text-align: center;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+
+        .footer {
+            background: #131a22;
+
+        }
+
+        .fthd {
+
+            display: flex;
+            justify-content: center;
+            color: #999;
+            gap: 40px;
+        }
+
+        .fthd:hover {
+            color: #fff;
+        }
+
+        .ftbox1 {
+            display: flex;
+            justify-content: space-between;
+            /* color: #757575; */
+            color: #fff;
+
+        }
+
+        #lastLi {
+            color: blue;
+        }
+
+        /* .ftList{
+    list-style: none;
+  } */
+
+        @media only screen and (max-width:500px) {
+            .nav {
+                display: block;
+                width: 100%;
+
+            }
+
+            .box1 {
+                display: flex;
+                width: 210px;
+
+                height: 50px;
+                margin-left: -70px;
+
+
+            }
+
+            #logo {
+                display: flex;
+                max-width: 100%;
+                height: 50px;
+                margin-top: 25px;
+
+            }
+
+            #catagory {
+                width: 50px;
+                height: 50px;
+
+            }
+
+            #search {
+                width: 100px;
+                margin-left: -4px;
+                height: 50px;
+            }
+
+            .box2 {
+                display: flex;
+                margin-left: -70px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="for_query">For any query, email us at <span>care@industrybuying.com</span>or call us on <span>+91
+            8448449073</span></div>
+    <div class="nav">
+        <div id="logo">
+            <img src="./Industrbuying.png" alt="">
+        </div>
+        <div class="box1">
+            <div>
+                <select name="category" id="catagory">
+                    <option value="str1">All Category</option>
+                    <option value="str1">1</option>
+                    <option value="str1">2</option>
+                    <option value="str1">3</option>
+                    <option value="str1">4</option>
+                </select>
+                <input type="text" id="search" placeholder="Search here">
+            </div>
+        </div>
+        <div class="box2">
+            <div class="signin">
+                <img src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+                    alt="">
+                <a href="./signIn.html">SignIn</a>
+            </div>
+            <div class="track">
+                <img src="https://www.iconpacks.net/icons/2/free-location-icon-2955-thumb.png" alt="">
+                <a href="">Track-Order</a>
+            </div>
+            <div class="cart">
+                <img src="https://image.pngaaa.com/851/3531851-middle.png" alt="">
+                <div>
+                    <span>0</span>
+                    <p>CART</p>
+                </div>
+            </div>
+            <div class="store">
+                <img src="https://www.logo.wine/a/logo/Google_Play/Google_Play-Badge-Logo.wine.svg" alt="">
+                <a href="https://play.google.com/store/games?pli=1">Downlods the apps</a>
+            </div>
+        </div>
+    </div>
+    <div class="front">
+        <div class="sidebar">
+            <section>
+                <ul>
+                    <div>
+                        <li><img src="https://static3.industrybuying.com/navigation/1626345464161209agriculture-garden-landscaping.webp
+                    " alt="">
+                            Agriculture Garden & Landscaping</li>
+                    </div>
+                    <div>
+                        <li> <img src="//static3.industrybuying.com/navigation/161209power-tools.png" alt=""> Power
+                            Tools
+                        </li>
+                    </div>
+
+                    <div>
+                        <li>
+                            <img src="//static3.industrybuying.com/navigation/1626346697161209office-supplies.webp"
+                                alt=""> Office Supplies
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <img src="//static3.industrybuying.com/navigation/1626346599161209material-handling.webp"
+                                alt=""> Material Handling and Packaging
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <img src="//static3.industrybuying.com/navigation/1626346831161209pumps.webp" alt="">
+                            Pumps
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <img src="//static3.industrybuying.com/navigation/161209automative-maintenance.png" alt="">
+                            Automotive Maintenance and Accessories
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <img src="//static3.industrybuying.com/navigation/1627045810safety.png" alt="">
+                            Safety
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <img src="//static3.industrybuying.com/navigation/1626345597161209cleaning.webp" alt="">
+                            Cleaning
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <img src="//static3.industrybuying.com/navigation/1626345697161209electrical.webp" alt="">
+                            Electrical
+                        </li>
+                    </div>
+                </ul>
+            </section>
+        </div>
+
+        <div id="main">
+            <div id="head">
+                <div id="slideshow">
+                    <!-- <img src="https://static3.industrybuying.com/homepage/16732564011662983964web-side-bnr-top%20(2)%20(1).png" alt="Error"> -->
+                </div>
+                <div>
+                    <img src="https://static3.industrybuying.com/homepage/16732564011662983964web-side-bnr-top%20(2)%20(1).png"
+                        alt="Error">
+                </div>
+                <div id="otp">
+                    <div id="otpimg"><img src="https://www.industrybuying.com/static/images/mobile.png" alt="Error">
+                        <p>Enter your phone number to <span>GET UPTO 5% OFF</span></p>
+                    </div>
+                    <form>
+                        <input type="number" placeholder="Enter your phone" id="">
+                        <input type="submit" value="GO">
+                    </form>
+
+                </div>
+                <div>
+                    <img src="https://static3.industrybuying.com/homepage/1551767207right-small-reseller2.gif"
+                        alt="Error">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="//static3.industrybuying.com/homepage/1652437509PowerHouse-Strip-Banner (1).png" alt="">
+    </div>
+</body>
+
+
+<div class="footer">
+
+    <div class="hdbox">
+        <div class="fthd">
+            <h3>Shop All Categories</h3>
+            <h3>Shop All  Brands</h3>
+            <h3>Popular Searches</h3>
+        </div>
+    </div>
+    <br>
+    <div class="ftbox1">
+        <div class="ftLis">
+            <ul>
+                <li>LED Lights</li>
+                <li>Paints</li>
+                <li>Corporate Gifts</li>
+                <li>Geysers</li>
+                <li>Welding</li>
+                <li>Tooling and Cutting</li>
+                <li>Abrasives</li>
+            </ul>
+        </div>
+        <div class="ftLis">
+            <ul>
+                <li>Power Tools</li>
+                <li>Pumps</li>
+                <li>Safety</li>
+                <li>Bearings</li>
+                <li>Cleaning</li>
+                <li>Dimension Measurement</li>
+                <li>Electrical</li>
+            </ul>
+        </div>
+
+        <div class="ftLis">
+            <ul>
+                <li>Electronics & Robotics</li>
+                <li>Fasteners</li>
+                <li>Furniture, Hospitality and Food Service</li>
+                <li>Hand Tools</li>
+                <li>Hydraulics</li>
+                <li>IT & Electronics</li>
+
+            </ul>
+        </div>
+
+        <div class="ftLis">
+            <ul>
+                <li>Industrial Automation</li>
+                <li>Lab Supplies</li>
+                <li>Machinery</li>
+                <li>Machining Accessories</li>
+                <li>Medical Supplies & Equipment</li>
+                <li>Office Supplies</li>
+
+            </ul>
+        </div>
+
+        <div class="ftLis">
+            <ul>
+                <li>Plumbing</li>
+                <li>Pneumatics</li>
+                <li>Automotive Maintenance and Accessories</li>
+                <li>Security</li>
+                <li id="lastLi">See all Categories ></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ftlast">
+
+    <div class="info">
+        <ul>
+            <li>
+                <h3>Company</h3>
+            </li>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Sell On Industrybuying</li>
+            <li>Special offers</li>
+            <li>Articles</li>
+
+        </ul>
+    </div>
+
+    <div class="info">
+        <ul>
+            <li>
+                <h3>Help</h3>
+            </li>
+            <li>FAQs</li>
+            <li>Report Infringement</li>
+            <li>Cancellations & Returns</li>
+            <li>Have a question or want to place an order?</li>
+            <li><img src="" alt=""></li>
+            <li>
+                Helpline Number: Call: +91 8448449073
+
+                (Mon-Sun: 9am-6pm)
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="info">
+        <ul>
+            <li>
+                <h3>Connect with us</h3>
+            </li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li>
+                Download Our APP!</li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </div>
+
+    <div class="info">
+        <ul>
+            <li>
+                <h3>Subscribe to Newsletter</h3>
+            </li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt="">jfjdb</li>
+            <li>
+                Download Our APP!</li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+</html>
+
+
+<script>
+   let imgtag = document.createElement("img");
+  let slidediv = document.getElementById("slideshow");
+  slidediv.append(imgtag);
+let currentIndex = 0;
+
+var slideImages = [
+    "//static3.industrybuying.com/homepage/1673953632Desktop-524xx334-Green-Soul-new.jpg",
+    "//static3.industrybuying.com/homepage/1674019851Desktop-524xx334-Auto-oprema.jpg","//static3.industrybuying.com/homepage/1667890944Industrial-buying-524x334-4.jpg",
+    "//static3.industrybuying.com/homepage/1650877078AGRIPRO.png","//static3.industrybuying.com/homepage/1671432246CP-PLUS-DESKTOP-(524X334).png","//static3.industrybuying.com/homepage/1672383942Air-Purifier-Desktop-banner-524x334-2.png"
+]
+slideshowFun(slideImages);
+
+function slideshowFun(images){
+  imgtag.setAttribute("src",images[currentIndex]);
+  if(currentIndex==images.length-1){
+    currentIndex = 0;
+  }else{
+    currentIndex++;
+  }
+}
+window.addEventListener("load", function () {
+    setInterval(slideshowFun,2000,slideImages);
+  });
+
+</script>
