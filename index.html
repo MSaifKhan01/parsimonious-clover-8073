@@ -7,351 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home-page</title>
     <style>
-        .nav {
-            display: flex;
-            width: 100%;
-            height: 150px;
-            gap: 120px;
-            background: #232f3e;
-            margin: auto;
-        }
-
-        .for_query {
-            font-family: Open Sans Semibold;
-            font-size: 12px;
-            color: #000;
-            text-align: right;
-            padding-right: 20px;
-            margin: 0 auto;
-            display: block;
-            width: 100%;
-            height: 20px;
-            background: #f3f3f3;
-        }
-
-        .for_query>span {
-            color: #ff0000;
-
-        }
-
-        #logo {
-            display: flex;
-            max-width: 100%;
-            height: 100px;
-            margin-left: 50px;
-            margin-top: 25px;
-
-        }
-
-        .box1 {
-            display: grid;
-            grid-template-columns: 2;
-            width: 500px;
-            margin: 35px 0px 0px 40px;
-            height: 50px;
-
-
-        }
-
-        #catagory {
-            width: 22%;
-            height: 100%;
-            background: #e9611e;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border: none;
-        }
-
-        #search {
-            width: 70%;
-            margin-left: -4px;
-            height: 95%;
-
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            border: none;
-
-
-        }
-
-        .box2 {
-            display: flex;
-        }
-
-        .signin {
-            display: flex;
-        }
-
-        .signin>img {
-            max-width: 60px;
-            height: 60px;
-            margin: 40px 0px 0px 40px;
-        }
-
-        .signin>a {
-            display: block;
-            max-width: 50px;
-            margin: 55px 0px 0px 10px;
-            text-decoration: none;
-            color: white;
-        }
-
-        .track {
-            display: flex;
-        }
-
-        .track>img {
-            max-width: 60px;
-            height: 60px;
-            margin: 40px 0px 0px 40px;
-        }
-
-        .track>a {
-            display: block;
-            max-width: 50px;
-            margin: 55px 0px 0px 0px;
-            text-decoration: none;
-            color: white;
-        }
-
-        .cart {
-            display: flex;
-            text-align: center;
-        }
-
-        .cart>img {
-            max-width: 60px;
-            height: 60px;
-            margin: 40px 0px 0px 40px;
-        }
-
-        .cart>div {
-            display: block;
-            max-width: 50px;
-            margin: 40px 10px 0px 10px;
-            text-decoration: none;
-            color: white;
-
-        }
-
-        .cart span {
-            display: flex;
-            background-color: #f3f3f3;
-            color: black;
-            padding-left: 18px;
-            border-radius: 10px;
-        }
-
-        .store {
-            display: block;
-        }
-
-        .store>img {
-            max-width: 150px;
-            height: 120px;
-            margin-left: 45px;
-
-        }
-
-        .store>a {
-            display: flex;
-            margin-left: 60px;
-            text-decoration: none;
-            color: white;
-            margin-top: -30px;
-        }
-
-        .sidebar {
-            width: 20%;
-            color: #666;
-        }
-
-        .sidebar li:hover {
-            background: #525d62;
-            color: azure;
-        }
-
-        #main {
-            width: 100%;
-
-
-        }
-
-        .front {
-            display: flex;
-        }
-
-        #head {
-            display: grid;
-            grid-template-columns: repeat(4, 250px);
-            grid-template-rows: repeat(4, 100px);
-            width: fit-content;
-            margin-top: 10px;
-            gap: 10px;
-            margin-left: 260px;
-
-
-
-
-        }
-
-        #head :nth-child(1) {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 1;
-            grid-row-end: 5;
-
-
-        }
-
-        #head :nth-child(2) {
-            grid-column-start: 3;
-            grid-column-end: 5;
-            grid-row-start: 1;
-            grid-row-end: 4;
-        }
-
-        #head :nth-child(3) {
-            grid-column-start: 3;
-            grid-column-end: 4;
-            grid-row-start: 4;
-            grid-row-end: 5;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-        }
-
-        #head :nth-child(4) {
-            grid-column-start: 4;
-            grid-column-end: 5;
-            grid-row-start: 4;
-            grid-row-end: 5;
-        }
-
-        #head img {
-            width: 100%;
-            height: 100%;
-        }
-
-        #otpimg {
-            display: flex;
-            width: 100%;
-            margin-bottom: 10px;
-            padding-left: 10px;
-            padding-top: 20px;
-            text-align: center;
-        }
-
-        #otpimg>img {
-            width: 5vw;
-            height: 5vh;
-        }
-
-        #otp input[type="submit"] {
-            height: 100%;
-            width: 15%;
-            border: none;
-            background-color: rgb(75, 75, 75);
-            color: white;
-            border-top-right-radius: 2px;
-            border-bottom-right-radius: 2px;
-
-        }
-
-        #otp p {
-            font-size: 70%;
-
-        }
-
-        #otp input[type="number"] {
-            width: 80%;
-            height: 100%;
-            text-align: center;
-            border: none;
-            box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-            border-top-left-radius: 2px;
-            border-bottom-left-radius: 2px;
-        }
-
-        .footer {
-            background: #131a22;
-
-        }
-
-        .fthd {
-
-            display: flex;
-            justify-content: center;
-            color: #999;
-            gap: 40px;
-        }
-
-        .fthd:hover {
-            color: #fff;
-        }
-
-        .ftbox1 {
-            display: flex;
-            justify-content: space-between;
-            /* color: #757575; */
-            color: #fff;
-
-        }
-
-        #lastLi {
-            color: blue;
-        }
-
-        /* .ftList{
-    list-style: none;
-  } */
-
-        @media only screen and (max-width:500px) {
-            .nav {
-                display: block;
-                width: 100%;
-
-            }
-
-            .box1 {
-                display: flex;
-                width: 210px;
-
-                height: 50px;
-                margin-left: -70px;
-
-
-            }
-
-            #logo {
-                display: flex;
-                max-width: 100%;
-                height: 50px;
-                margin-top: 25px;
-
-            }
-
-            #catagory {
-                width: 50px;
-                height: 50px;
-
-            }
-
-            #search {
-                width: 100px;
-                margin-left: -4px;
-                height: 50px;
-            }
-
-            .box2 {
-                display: flex;
-                margin-left: -70px;
-            }
-
-        }
     </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -483,147 +140,457 @@
             </div>
         </div>
     </div>
+<div>
+    <div id="main2">
+        <div id="left1">
+            <div id="bar1">
+                <img src="https://static3.industrybuying.com/homepage/1652437509PowerHouse-Strip-Banner%20(1).png"
+                    alt="Error">
+            </div>
 
-    <div class="banner">
-        <img src="//static3.industrybuying.com/homepage/1652437509PowerHouse-Strip-Banner (1).png" alt="">
+
+            <h3>IB POWER BRAND</h3>
+
+            <div id="product1">
+                <div class="card1">
+                    <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                        alt="">
+                    <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+                    <p id="des">by AgriPro</p>
+                    <div class="addcart">
+                        <div class="add_to_cart">
+                            <img src="" alt="">
+                            <h3 >ADD TO CART</h3>
+                        </div>
+                        <div class="buy">
+                            <h3>BUY NOW</h3>
+                        </div>
+                    </div>
+                    <hr>
+                    <h3 id="price">Rs. 10,000</h3>
+                </div>
+                <div class="card1">
+                    <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                        alt="">
+                    <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+                    <p id="des">by AgriPro</p>
+                    <hr>
+                    <h3 id="price">Rs. 10,000</h3>
+                </div>
+                <div class="card1">
+                    <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                        alt="">
+                    <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+                    <p id="des">by AgriPro</p>
+                    <hr>
+                    <h3 id="price">Rs. 10,000</h3>
+                </div>
+                <div class="card1">
+                    <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                        alt="">
+                    <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+                    <p id="des">by AgriPro</p>
+                    <hr>
+                    <h3 id="price">Rs. 10,000</h3>
+                </div>
+                <div class="card1">
+                    <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                        alt="">
+                    <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+                    <p id="des">by AgriPro</p>
+                    <hr>
+                    <h3 id="price">Rs. 10,000</h3>
+                </div>
+                <div class="card1">
+                    <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                        alt="">
+                    <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+                    <p id="des">by AgriPro</p>
+                    <hr>
+                    <h3 id="price">Rs. 10,000</h3>
+                </div>
+                <div class="card1">
+                    <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                        alt="">
+                    <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+                    <p id="des">by AgriPro</p>
+                    <hr>
+                    <h3 id="price">Rs. 10,000</h3>
+                </div>
+                <div class="card1">
+                    <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                        alt="">
+                    <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+                    <p id="des">by AgriPro</p>
+                    <hr>
+                    <h3 id="price">Rs. 10,000</h3>
+                </div>
+            </div>
+        </div>
+        <div id="right1">
+            <div>
+                <img src="https://static3.industrybuying.com/homepage/1669783977image%20(8).png" alt="Error">
+            </div>
+            <div>
+                <img src="https://static3.industrybuying.com/homepage/1669871486image%20(10).png" alt="error">
+            </div>
+        </div>
+    </div>
+    <!-- MAIN 2 COMPLETETD......*** -->
+
+    <!-- BAR 2 STARTED..........  -->
+    <div id="bar2">
+        <img src="https://static3.industrybuying.com/homepage/1663932735Vacuum-Cleaner.jpg" alt="Error">
+        <h3>BSET SELLERS</h3>
+    </div>
+    <!-- BAR2 COMPLETED***** -->
+    <!-- MAIN 3 STARTED **** -->
+
+  
+   
+   
+   
+    <div id="main3">
+      
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+           
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <h3>NEW ARRIVALS</h3>
+    </div>
+    <!-- MAIN3 COMPLETERD**** -->
+    <!-- MAIN4 STARTED******** -->
+  
+    <div id="main4">
+       
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+        <div class="card1">
+            <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp"
+                alt="">
+            <p id="detail">AgriPro 3 HP Butterfly Combined Rice Mill Machine </p>
+            <p id="des">by AgriPro</p>
+            <hr>
+            <h3 id="price">Rs. 10,000</h3>
+        </div>
+    </div></div>
+
+    <div class="footer">
+
+        <div class="hdbox">
+            <div class="fthd">
+                <h3>Shop All Categories</h3>
+                <h3>Shop All Brands</h3>
+                <h3>Popular Searches</h3>
+            </div>
+        </div>
+        <br>
+        <div class="ftbox1">
+            <div class="ftLis">
+                <ul>
+                    <li>LED Lights</li>
+                    <li>Paints</li>
+                    <li>Corporate Gifts</li>
+                    <li>Geysers</li>
+                    <li>Welding</li>
+                    <li>Tooling and Cutting</li>
+                    <li>Abrasives</li>
+                </ul>
+            </div>
+            <div class="ftLis">
+                <ul>
+                    <li>Power Tools</li>
+                    <li>Pumps</li>
+                    <li>Safety</li>
+                    <li>Bearings</li>
+                    <li>Cleaning</li>
+                    <li>Dimension Measurement</li>
+                    <li>Electrical</li>
+                </ul>
+            </div>
+    
+            <div class="ftLis">
+                <ul>
+                    <li>Electronics & Robotics</li>
+                    <li>Fasteners</li>
+                    <li>Furniture, Hospitality and Food Service</li>
+                    <li>Hand Tools</li>
+                    <li>Hydraulics</li>
+                    <li>IT & Electronics</li>
+    
+                </ul>
+            </div>
+    
+            <div class="ftLis">
+                <ul>
+                    <li>Industrial Automation</li>
+                    <li>Lab Supplies</li>
+                    <li>Machinery</li>
+                    <li>Machining Accessories</li>
+                    <li>Medical Supplies & Equipment</li>
+                    <li>Office Supplies</li>
+    
+                </ul>
+            </div>
+    
+            <div class="ftLis">
+                <ul>
+                    <li>Plumbing</li>
+                    <li>Pneumatics</li>
+                    <li>Automotive Maintenance and Accessories</li>
+                    <li>Security</li>
+                    <li id="lastLi">See all Categories ></li>
+    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ftlast">
+    
+        <div class="info">
+            <ul>
+                <li>
+                    <h3 class="dfclr">Company</h3>
+                </li>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Sell On Industrybuying</li>
+                <li>Special offers</li>
+                <li>Articles</li>
+    
+            </ul>
+        </div>
+    
+        <div class="info">
+            <ul>
+                <li>
+                    <h3 class="dfclr">Help</h3>
+                </li>
+                <li>FAQs</li>
+                <li>Report Infringement</li>
+                <li>Cancellations & Returns</li>
+                <li>Have a question or want to place an order?</li>
+                <li>
+                    Helpline Number: Call: +91 8448449073
+    
+                    (Mon-Sun: 9am-6pm)
+                </li>
+    
+            </ul>
+        </div>
+    
+        <div class="info">
+            <ul>
+                <li>
+                    <h3 class="dfclr">Connect with us</h3>
+                </li>
+                <li>
+                    <div class="social">
+                        <a href="https://www.facebook.com/industrybuying"> <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+                                alt=""></a>
+    
+    
+                        <a href="https://twitter.com/industrybuying"><img
+                                src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-twitter-icon-logo-png-image_3560523.png"
+                                alt=""></a>
+    
+    
+                        <a href="https://www.pinterest.com/industrybuy0039/"><img
+                                src="https://www.freepnglogos.com/uploads/pinterest-logo-p-png-0.png" alt=""></a>
+                    </div>
+    
+    
+                </li>
+                Download Our APP!</li>
+                <li>
+                    <div class="plstore">
+                        <a href="https://play.google.com/store/apps/details?id=industrybuying.com.industrybuying"> <img
+                                src="https://e7.pngegg.com/pngimages/52/715/png-clipart-google-play-logo-google-play-computer-icons-app-store-google-text-logo.png"
+                                alt=""></a>
+    
+    
+                        <a href="https://apps.apple.com/in/app/industrybuying/id1602345204"><img
+                                src="https://1000logos.net/wp-content/uploads/2020/08/apple-app-store-logo.jpg" alt=""></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="info">
+            <ul>
+                <li>
+                    <h3 class="dfclr">Subscribe to Newsletter</h3>
+                </li>
+                <div class="signup">
+                    <input type="text" placeholder="Enter your email adress">
+                    <a href="./signUp.html">Sign Me UP</a>
+    
+                </div>
+                <p>Sign up to get exclusive offers from our favorite brands and to be well up in the news</p>
+    
+    
+            </ul>
+        </div>
+    
+    
+    </div>
+    <div class="pymnt">
+        <h3 class="dfclr">Payment Options</h3>
+        <img style="border: #ff0000;" src="/static/images/payment_options_min.png" alt="">
+    
     </div>
 </body>
 
 
-<div class="footer">
 
-    <div class="hdbox">
-        <div class="fthd">
-            <h3>Shop All Categories</h3>
-            <h3>Shop All  Brands</h3>
-            <h3>Popular Searches</h3>
-        </div>
-    </div>
-    <br>
-    <div class="ftbox1">
-        <div class="ftLis">
-            <ul>
-                <li>LED Lights</li>
-                <li>Paints</li>
-                <li>Corporate Gifts</li>
-                <li>Geysers</li>
-                <li>Welding</li>
-                <li>Tooling and Cutting</li>
-                <li>Abrasives</li>
-            </ul>
-        </div>
-        <div class="ftLis">
-            <ul>
-                <li>Power Tools</li>
-                <li>Pumps</li>
-                <li>Safety</li>
-                <li>Bearings</li>
-                <li>Cleaning</li>
-                <li>Dimension Measurement</li>
-                <li>Electrical</li>
-            </ul>
-        </div>
-
-        <div class="ftLis">
-            <ul>
-                <li>Electronics & Robotics</li>
-                <li>Fasteners</li>
-                <li>Furniture, Hospitality and Food Service</li>
-                <li>Hand Tools</li>
-                <li>Hydraulics</li>
-                <li>IT & Electronics</li>
-
-            </ul>
-        </div>
-
-        <div class="ftLis">
-            <ul>
-                <li>Industrial Automation</li>
-                <li>Lab Supplies</li>
-                <li>Machinery</li>
-                <li>Machining Accessories</li>
-                <li>Medical Supplies & Equipment</li>
-                <li>Office Supplies</li>
-
-            </ul>
-        </div>
-
-        <div class="ftLis">
-            <ul>
-                <li>Plumbing</li>
-                <li>Pneumatics</li>
-                <li>Automotive Maintenance and Accessories</li>
-                <li>Security</li>
-                <li id="lastLi">See all Categories ></li>
-
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="ftlast">
-
-    <div class="info">
-        <ul>
-            <li>
-                <h3>Company</h3>
-            </li>
-            <li>About Us</li>
-            <li>Careers</li>
-            <li>Sell On Industrybuying</li>
-            <li>Special offers</li>
-            <li>Articles</li>
-
-        </ul>
-    </div>
-
-    <div class="info">
-        <ul>
-            <li>
-                <h3>Help</h3>
-            </li>
-            <li>FAQs</li>
-            <li>Report Infringement</li>
-            <li>Cancellations & Returns</li>
-            <li>Have a question or want to place an order?</li>
-            <li><img src="" alt=""></li>
-            <li>
-                Helpline Number: Call: +91 8448449073
-
-                (Mon-Sun: 9am-6pm)
-            </li>
-
-        </ul>
-    </div>
-
-    <div class="info">
-        <ul>
-            <li>
-                <h3>Connect with us</h3>
-            </li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li>
-                Download Our APP!</li>
-            <li><img src="" alt=""></li>
-        </ul>
-    </div>
-
-    <div class="info">
-        <ul>
-            <li>
-                <h3>Subscribe to Newsletter</h3>
-            </li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt="">jfjdb</li>
-            <li>
-                Download Our APP!</li>
-            <li><img src="" alt=""></li>
-        </ul>
-    </div>
-
-</div>
 
 
 
@@ -631,28 +598,28 @@
 
 
 <script>
-   let imgtag = document.createElement("img");
-  let slidediv = document.getElementById("slideshow");
-  slidediv.append(imgtag);
-let currentIndex = 0;
+    let imgtag = document.createElement("img");
+    let slidediv = document.getElementById("slideshow");
+    slidediv.append(imgtag);
+    let currentIndex = 0;
 
-var slideImages = [
-    "//static3.industrybuying.com/homepage/1673953632Desktop-524xx334-Green-Soul-new.jpg",
-    "//static3.industrybuying.com/homepage/1674019851Desktop-524xx334-Auto-oprema.jpg","//static3.industrybuying.com/homepage/1667890944Industrial-buying-524x334-4.jpg",
-    "//static3.industrybuying.com/homepage/1650877078AGRIPRO.png","//static3.industrybuying.com/homepage/1671432246CP-PLUS-DESKTOP-(524X334).png","//static3.industrybuying.com/homepage/1672383942Air-Purifier-Desktop-banner-524x334-2.png"
-]
-slideshowFun(slideImages);
+    var slideImages = [
+        "//static3.industrybuying.com/homepage/1673953632Desktop-524xx334-Green-Soul-new.jpg",
+        "//static3.industrybuying.com/homepage/1674019851Desktop-524xx334-Auto-oprema.jpg", "//static3.industrybuying.com/homepage/1667890944Industrial-buying-524x334-4.jpg",
+        "//static3.industrybuying.com/homepage/1650877078AGRIPRO.png", "//static3.industrybuying.com/homepage/1671432246CP-PLUS-DESKTOP-(524X334).png", "//static3.industrybuying.com/homepage/1672383942Air-Purifier-Desktop-banner-524x334-2.png"
+    ]
+    slideshowFun(slideImages);
 
-function slideshowFun(images){
-  imgtag.setAttribute("src",images[currentIndex]);
-  if(currentIndex==images.length-1){
-    currentIndex = 0;
-  }else{
-    currentIndex++;
-  }
-}
-window.addEventListener("load", function () {
-    setInterval(slideshowFun,2000,slideImages);
-  });
+    function slideshowFun(images) {
+        imgtag.setAttribute("src", images[currentIndex]);
+        if (currentIndex == images.length - 1) {
+            currentIndex = 0;
+        } else {
+            currentIndex++;
+        }
+    }
+    window.addEventListener("load", function () {
+        setInterval(slideshowFun, 2000, slideImages);
+    });
 
 </script>
