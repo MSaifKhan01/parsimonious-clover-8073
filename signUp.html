@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in Page</title>
-    <style>
-        .nav {
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up Page</title>
+  <style>
+      /* Write all necessery css here  */
+      .nav {
             display: flex;
             width: 100%;
             height: 150px;
@@ -162,7 +163,7 @@
             color: white;
             margin-top: -30px;
         }
-
+      
         * {
             padding: 0;
             margin: 0;
@@ -249,7 +250,7 @@
             margin: 0 6px;
             cursor: pointer;
         }
-    </style>
+  </style>
 </head>
 
 <body>
@@ -295,8 +296,12 @@
 
     <div class="form-box">
 
-        <h2>Login Here</h2>
+        <h2>Register Here</h2>
         <form>
+            <div class="input-group">
+                
+                <input type="text" placeholder="enter your name" id="name">
+            </div>
             <div class="input-group">
                 
                 <input type="text" placeholder="enter your email" id="email">
@@ -308,7 +313,7 @@
             <button type="submit">Submit &#10132;</button>
 
         </form>
-        <p>Login in with social media account</p>
+        <p>Register with social media account</p>
         <div class="social">
             <a href="https://www.facebook.com/industrybuying"> <img src="facebook.png" ></a>
             <a href="https://twitter.com/industrybuying"><img src="twitter.png"></a>
@@ -319,34 +324,29 @@
         </div>
 
     </div>
-   
+
 </body>
 <script>
-   
-    let mail = document.getElementById("email");
-    let password = document.getElementById("password");
-    let form = document.querySelector("form");
-    let arr = JSON.parse(localStorage.getItem("account-data"));
+  let myform=document.querySelector("form")
+  let nameInp=document.getElementById("name")
+  let emailInp=document.getElementById("email")
+  let passInp=document.getElementById("password")
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        let obj1 = {
-            mailInp: mail.value,
-            passInp: password.value,
+  let sData=JSON.parse(localStorage.getItem("account-data"))
+  if(sData==null){
+     sData=[]
+    }
+    myform.addEventListener("submit",(e)=>{
+      e.preventDefault();
+      let formData={
+            name: nameInp.value,
+            email: emailInp.value,
+            password:passInp.value
         };
-        for (let i = 0; i < arr.length; i++) {
-            if (
-                arr[i].email == obj1.mailInp &&
-                arr[i].password == obj1.passInp
-            ) {
-               alert("Sign in Successful");
-               window.location.href = "./index.html"
-            } else {
-                alert("Wrong Credentials");
-                
-            }
-        }
-    });
+        sData.push(formData)
+        localStorage.setItem("account-data",JSON.stringify(sData))
+        window.location.href = "./index.html"
+    })
 </script>
 
 </html>
