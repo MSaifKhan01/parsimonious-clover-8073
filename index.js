@@ -1,5 +1,17 @@
 
-    // sliding part
+   
+   
+    let qtyel=document.getElementById("qty")
+    let Cart= JSON.parse(localStorage.getItem("cart"))||[];
+      let count=0;
+  for(let i=0;i<Cart.length;i++)
+  {
+    count+=Cart[i].quantity;
+  }
+  
+  qtyel.textContent=count;
+   
+   // sliding part
     let imgtag = document.createElement("img");
     let slidediv = document.getElementById("slideshow");
     slidediv.append(imgtag);
@@ -34,6 +46,7 @@
             let data= await request.json()
             console.log(data);
             Display(data)
+            // FilterData(data)
         }catch(err){
             console.log(err)
         }
@@ -43,6 +56,7 @@
       let div1 = document.querySelector("#product1");
 
     function Display(data) {
+      div1.innerHTML= "";
       data.forEach((element) => {
         if(element.category==="IB POWER BRAND"){
             
@@ -151,6 +165,11 @@
        
     //   }); 
     // }
+
+//  below both function are for searching
+
+
+
     // let inpbox=document.getElementById("search")
 
     // inpbox.addEventListener("submit", (e) => {
@@ -169,6 +188,50 @@
     //     });
     //     Display(filtered);
     //   });
+
+
+    //   let formel=document.getElementById("sform")
+    // let inpel=document.getElementById("search")
+
+    // formel.addEventListener("submit", (e) => {
+    //     e.preventDefault();
+    //     let inpel = formel.search.value;
+    //     console.log("hello1")
+  
+    //     let filtered = fectheddata.filter((element,i) => {
+    //       if (
+    //         element[i].name.toUpperCase().includes(inpel.toUpperCase()) ===
+    //         true
+    //       ) {
+    //         console.log("hello2")
+    //         return true;
+    //       } else {
+    //         console.log("hello3")
+    //         return false;
+    //       }
+    //     });
+    //     console.log("hello4")
+    //     Display(filtered);
+    //   });
+
+
+// filter part
+
+      // let filterBy = document.getElementById("filter");
+      // filterBy.addEventListener("change",()=>{
+      //   fectheddata()
+      // })
+      // function FilterData(data){
+      //   let filterValue = filterBy.value;
+      //   if(filterValue===""){
+      //     Display(data)
+      //   }else{
+      //     data=data.filter((product)=>{
+      //       return product.category == filterValue;
+      //     })
+      //     Display(data)
+      //   }
+      // }
 
 
 

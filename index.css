@@ -4,6 +4,7 @@ div ul li {
 
 .nav {
     display: flex;
+    justify-content: space-around;
     width: 100%;
     height: 150px;
     gap: 120px;
@@ -11,6 +12,8 @@ div ul li {
     margin: auto;
     position: sticky;
     top: 0px;
+
+
 }
 
 .for_query {
@@ -24,7 +27,7 @@ div ul li {
     width: 100%;
     height: 20px;
     background: #f3f3f3;
-    /* position: sticky; */
+   
 }
 
 .for_query>span {
@@ -42,35 +45,53 @@ div ul li {
 }
 
 .box1 {
-    display: grid;
-    grid-template-columns: 2;
-    width: 500px;
-    margin: 35px 0px 0px 40px;
-    height: 50px;
-
-
+    display: flex;
+    width: 100%;
+    height: 50%;
+    margin-top: 35px;
+   
 }
 
-#catagory {
+#filter {
     width: 22%;
-    height: 100%;
+    height: 50px;
     background: #e9611e;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: none;
 }
 
-#search {
-    width: 70%;
-    margin-left: -4px;
-    height: 95%;
 
+#search {
+
+    width: 420px;
+    margin-left: 0x;
+    margin-top: 0px;
+    height: 50px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border: none;
-
-
 }
+#sform{
+    display: flex;
+}
+.box1 input[type="submit"] {
+    background-image: url("https://www.industrybuying.com/static/svg/search-icon-header.svg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 15px;
+    }
+#scr_button{
+    border: none;
+    background-color: white;
+    margin-left:-54px;
+    height: 50px;
+    border-top-right-radius:5px ;
+    border-bottom-right-radius:5px ;
+    color: rgba(0, 0, 0, 0);
+    
+}
+
 
 .box2 {
     display: flex;
@@ -107,7 +128,7 @@ div ul li {
 .track>a {
     display: block;
     max-width: 50px;
-    margin: 55px 0px 0px 0px;
+    margin: 55px 0px 0px 13px;
     text-decoration: none;
     color: white;
 }
@@ -124,7 +145,7 @@ div ul li {
 }
 
 .cart>div {
-    display: block;
+    display: grid;
     max-width: 50px;
     margin: 40px 10px 0px 10px;
     text-decoration: none;
@@ -136,8 +157,15 @@ div ul li {
     display: flex;
     background-color: #f3f3f3;
     color: black;
+    height: 20px;
+  
     padding-left: 18px;
     border-radius: 10px;
+}
+.cart a{
+    color: white;
+    margin-bottom: 35px;
+    text-decoration: none;
 }
 
 .store {
@@ -187,10 +215,6 @@ div ul li {
     margin-top: 10px;
     gap: 10px;
     margin-left: 260px;
-
-
-
-
 }
 
 #head :nth-child(1) {
@@ -273,14 +297,6 @@ div ul li {
     border-bottom-left-radius: 2px;
 }
 
-.addcart div{
-    display: flex;
-}
-.addcart div:hover {
-    display: none;
-
-   
-}
 
 #main2 {
     display: flex;
@@ -309,7 +325,7 @@ div ul li {
 
 #right1 :nth-child(1) {
     width: 210px;
-    /* height: ; */
+  
 }
 
 #right1 :nth-child(2) {
@@ -327,9 +343,16 @@ div ul li {
     grid-template-columns: repeat(4, 200px);
     grid-template-rows: repeat(2, 350px);
     gap: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
 }
+.card1{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
+/* #card1:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} */
 #product1 img {
     width: 230px;
     height: 150px;
@@ -340,6 +363,7 @@ div ul li {
 }
 
 #detail {
+    height: 90px;
     text-align: start;
     margin-left: 5px;
     font-size: 15px;
@@ -348,6 +372,7 @@ div ul li {
 }
 
 #des {
+    height: 20px;
     text-align: start;
     margin-left: 5px;
     font-size: 70%;
@@ -359,14 +384,12 @@ div ul li {
     text-align: end;
     margin-right: 5px;
     color: #FF0000;
-    /* margin-bottom: 2px; */
+   
 }
 
 #product1 div{
     background-color: white;
     height: 350px;
-    border: 10px solid red;
-
 }
 
 #bar1 {
@@ -382,9 +405,6 @@ div ul li {
     width: 1030px;
     margin-left: 260px;
     padding-top: 10px;
-
-
-
 }
 
 #bar2 img {
@@ -394,19 +414,21 @@ div ul li {
 #main3 {
     display: grid;
     grid-template-columns: repeat(5, 203px);
-    grid-template-rows: repeat(2, 350px);
+    grid-template-rows: repeat(2, 390px);
     gap: 4px;
     margin-left: 260px;
 }
+
 
 #main3 img {
     width: 100%;
 }
 
-#main>h3 {
-    margin-left: 260px;
+#main3 h3 {
+  
     margin-top: 20px;
     margin-bottom: 20px;
+    color: #FF0000;
 }
 
 #main3 hr {
@@ -414,6 +436,7 @@ div ul li {
 }
 
 #main4 {
+ 
     display: grid;
     grid-template-columns: repeat(5, 203px);
     grid-template-rows: repeat(2, 350px);
@@ -424,26 +447,49 @@ div ul li {
 
 
 #main4 img {
-    width: 100%;
+    width: 200px;
+    height: 150px;
+   
+}
+
+#main4 h3 {
+ 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #FF0000;
 }
 
 #main4 hr {
     border-top: 1px dashed #8c8b8b;
 }
 #main5 {
+   
     display: grid;
     grid-template-columns: repeat(5, 203px);
     grid-template-rows: repeat(2, 350px);
     gap: 4px;
     margin-left: 260px;
 }
+
+
+
 #main5 img {
-    width: 100%;
+    width: 200px;
+    height: 150px;
+   
 }
 
-/* #main5 hr {
+#main5 h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #FF0000;
+}
+
+#main5 hr {
     border-top: 1px dashed #8c8b8b;
-} */
+}
+
+
 
 /* new******* */
 .navigation {
@@ -465,12 +511,7 @@ div ul li {
     border-radius: 2px;
 }
 
-#main5 {
-    display: flex;
-    width: 1030px;
-    margin-left: 260px;
 
-}
 
 #left2 {
     display: grid;
@@ -483,21 +524,6 @@ div ul li {
 #left2 img {
     width: 100%;
 
-}
-
-.card2 {
-    background-color: white;
-    padding-top: 10px;
-}
-
-.card2>.det {
-    margin-top: 20px;
-}
-
-.card2>.des2 {
-    color: rgb(1, 155, 1);
-    font-size: 12px;
-    margin-top: 10px;
 }
 
 #right2 {
@@ -530,7 +556,6 @@ div ul li {
 .ftbox1 {
     display: flex;
     justify-content: space-between;
-    /* color: #757575; */
     color: #fff;
 
 }
@@ -544,13 +569,9 @@ div ul li {
     justify-content: space-around;
 }
 
-/* .ftList{
-list-style: none;
-} */
+
 .signup {
     display: flex;
-    /* margin-left: 70px; */
-
 }
 
 .signup>input {
@@ -571,7 +592,6 @@ list-style: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border: none;
-    /* text-align: center; */
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -594,6 +614,10 @@ list-style: none;
     display: flex;
     gap: 20px;
     width: 40px;
+}
+.plstore img{
+    margin-top: 5px;
+    width: 80px;
 }
 
 .dfclr {

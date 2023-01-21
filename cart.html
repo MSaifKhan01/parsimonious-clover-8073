@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <style>
+      /* Write all necessery css here  */
+   
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+ }
+
+        
+      
+      #cart-container{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        grid-gap: 30px;
+        justify-content: center;
+        
+      }
+      #cart-container>div{
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding: 10px;
+      }
+      #cart-container>div>img{
+        height: 200px;
+        width: 100%;
+      }
+      #cart-container>div>button{
+        
+        background-color: rgb(81, 201, 245);
+        color: white;
+        padding: 5px;
+        border: none;
+        border-radius: 3px;
+        margin: 10px;
+      }
+      #mainpro{
+        margin-top: 200px;
+      }
+    </style>
+
+<link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <div class="nav">
+      <div id="logo">
+          <img src="./Industrbuying.png" alt="">
+      </div>
+      <div class="box1">
+          <!-- <div> -->
+              <select id="filter">
+                <option value="">ALL CATEGORIES</option>
+                <option value="IB POWER BRAND">IB POWER BRAND</option>
+                <option value="  Best Sellers">BEST SELLERS</option>
+                <option value=" NEW ARRIVALS">NEW ARRIVALS</option>
+                <option value="Office Supplies">OFFICE SUPPLIES</option>
+                <option value="Power Tools">POWER TOOLS</option>
+                <option value="IT & Electronics">IT & ELECTRONIS</option>
+              </select>
+              <form action="submit" id="sform">
+                  <input type="text" id="search" placeholder="Scarch Product by title, supllier, sku,category, brand etc... ">
+                  <input type="submit"  value="Scerch" id="scr_button" />
+              </form>
+              
+          <!-- </div> -->
+      </div>
+      <div class="box2">
+          <div class="signin">
+              <img src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+                  alt="">
+              <a href="./index.html">HOME</a>
+          </div>
+          <div class="track">
+              <img src="https://s3-us-west-2.amazonaws.com/cbi-image-service-prd/modified/ba796aae-6f13-4b27-8e1e-4197133ab07f.png" alt="">
+              <a href="./product.html">PRODUCTS</a>
+          </div>
+          <div class="cart">
+              <img src="https://image.pngaaa.com/851/3531851-middle.png" alt="">
+              <div>
+                  <span id="qty">0</span>
+                  <a href="./cart.html">CART</a>
+                  <!-- <p>CART</p> -->
+              </div>
+          </div>
+          <div class="store">
+              <img src="https://www.logo.wine/a/logo/Google_Play/Google_Play-Badge-Logo.wine.svg" alt="">
+              <a href="https://play.google.com/store/games?pli=1">Downlods the apps</a>
+          </div>
+      </div>
+  </div>
+
+
+     
+        
+
+    </div>
+       </div>
+</div>
+
+
+    <div id="mainpro"><h1 id="total">Your Total cart Price is:- Rs <span id="cart-total">0</span></h1>
+    <div id="cart-container">
+      <!-- Here Append All the cart Products -->
+    </div>
+   </div>
+     
+  </body>
+  <script>
+    // Write all necessery JS here 
+let Cart= JSON.parse(localStorage.getItem("cart"))||[];
+let Container = document.getElementById("cart-container");
+
+    function DisplayProduct(data){
+      let total = document.getElementById("cart-total")
+      const totalPro = document.getElementById("top")
+Container.innerHTML = "";
+Cart.forEach((product) => {
+  let card = document.createElement("div");
+  let image = document.createElement("img");
+  let brand = document.createElement("h3");
+  let category = document.createElement("p");
+  let details = document.createElement("p");
+  let quantity= document.createElement("p");
+
+  let price = document.createElement("h4");
+  let Remove = document.createElement("button");
+  let Increment = document.createElement("button");
+  let Decrement = document.createElement("button");
+
+  quantity.textContent= product.quantity;
+  image.src = product.image;
+  brand.textContent = product.name;
+  category.textContent = product.category;
+  price.textContent = `₹${product.price}`;
+  details.textContent = product.title;
+  Remove.textContent="Remove";
+  Increment.textContent="+";
+  Decrement.textContent="-";
+
+  Remove.addEventListener("click",()=>{
+     Cart=Cart.filter((ele)=>{
+      return ele.id!==product.id;
+     })
+     localStorage.setItem("cart",JSON.stringify(Cart));
+     DisplayProduct();
+  })
+  Increment.addEventListener("click",()=>{
+     product=product.quantity++;
+     localStorage.setItem("cart",JSON.stringify(Cart));
+     DisplayProduct();
+    })
+    Decrement.addEventListener("click",()=>{
+     if(product.quantity>1){
+      product=product.quantity--;
+     localStorage.setItem("cart",JSON.stringify(Cart));
+     DisplayProduct();
+     }
+    })
+
+    Container.append(card);
+  card.append(image,brand,price,details,category,Remove,Increment,Decrement,quantity);
+
+
+});
+let qtyel=document.getElementById("qty")
+let sum=0;
+let count=0;
+for(let i=0;i<Cart.length;i++)
+{
+  sum+=Cart[i].price*Cart[i].quantity;
+  count+=Cart[i].quantity;
+}
+total.textContent=sum;
+qtyel.textContent=count;
+
+}
+DisplayProduct();
+
+  </script>
+</html>

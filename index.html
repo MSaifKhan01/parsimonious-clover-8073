@@ -19,32 +19,37 @@
             <img src="./Industrbuying.png" alt="">
         </div>
         <div class="box1">
-            <div>
-                <select name="category" id="catagory">
-                    <option value="str1">All Category</option>
-                    <option value="str1">1</option>
-                    <option value="str1">2</option>
-                    <option value="str1">3</option>
-                    <option value="str1">4</option>
+            <!-- <div> -->
+                <select id="filter">
+                    <option value="">All Category</option>
+                    <option value="IB POWER BRAND">IB POWER BRAND</option>
+                    <option value="  Best Sellers">  Best Sellers</option>
+                    <option value=" NEW ARRIVALS"> NEW ARRIVALS</option>
+                    <option value="Office Supplies">Office Supplies</option>
                 </select>
-                <input type="text" id="search" placeholder="Search here">
-            </div>
+                <form action="submit" id="sform">
+                    <input type="text" id="search" placeholder="Scarch Product by title, supllier, sku,category, brand etc... ">
+                    <input type="submit"  value="Scerch" id="scr_button" />
+                </form>
+                
+            <!-- </div> -->
         </div>
         <div class="box2">
             <div class="signin">
                 <img src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
                     alt="">
-                <a href="./signIn.html">SignIn</a>
+                <a href="./signIn.html">SIGNIN</a>
             </div>
             <div class="track">
-                <img src="https://www.iconpacks.net/icons/2/free-location-icon-2955-thumb.png" alt="">
-                <a href="">Track-Order</a>
+                <img src="https://s3-us-west-2.amazonaws.com/cbi-image-service-prd/modified/ba796aae-6f13-4b27-8e1e-4197133ab07f.png" alt="">
+                <a href="./product.html">PRODUCTS</a>
             </div>
             <div class="cart">
                 <img src="https://image.pngaaa.com/851/3531851-middle.png" alt="">
                 <div>
-                    <span>0</span>
-                    <p>CART</p>
+                    <span id="qty">0</span>
+                    <a href="./cart.html">CART</a>
+                    <!-- <p>CART</p> -->
                 </div>
             </div>
             <div class="store">
@@ -117,7 +122,7 @@
         <div id="main">
             <div id="head">
                 <div id="slideshow">
-                    <!-- <img src="https://static3.industrybuying.com/homepage/16732564011662983964web-side-bnr-top%20(2)%20(1).png" alt="Error"> -->
+
                 </div>
                 <div>
                     <img src="https://static3.industrybuying.com/homepage/16732564011662983964web-side-bnr-top%20(2)%20(1).png"
@@ -176,8 +181,6 @@
    
     <div id="main3">
       
-       
-       
     </div>
 
     <div id="bar2">
@@ -198,6 +201,8 @@
         <div id="main5">
 
         </div>
+
+        
     </div>
 </div>
 
@@ -358,7 +363,7 @@
     
             </ul>
         </div>
-    
+       
     
     </div>
     <div class="pymnt">
@@ -366,6 +371,7 @@
         <img style="border: #ff0000;" src="/static/images/payment_options_min.png" alt="">
     
     </div>
+    
 </body>
 
 
