@@ -250,6 +250,7 @@
             cursor: pointer;
         }
     </style>
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -260,11 +261,13 @@
         <div class="box1">
             <div>
                 <select name="category" id="catagory">
-                    <option value="str1">All Category</option>
-                    <option value="str1">1</option>
-                    <option value="str1">2</option>
-                    <option value="str1">3</option>
-                    <option value="str1">4</option>
+                    <option value="">ALL CATEGORIES</option>
+                    <option value="IB POWER BRAND">IB POWER BRAND</option>
+                    <option value="  Best Sellers">BEST SELLERS</option>
+                    <option value=" NEW ARRIVALS">NEW ARRIVALS</option>
+                    <option value="Office Supplies">OFFICE SUPPLIES</option>
+                    <option value="Power Tools">POWER TOOLS</option>
+                    <option value="IT & Electronics">IT & ELECTRONIS</option>
                 </select>
                 <input type="text" id="search" placeholder="Search here">
             </div>
@@ -276,9 +279,11 @@
                 <a href="./index.html">Go to Home</a>
             </div>
             <div class="track">
-                <img src="https://www.iconpacks.net/icons/2/free-location-icon-2955-thumb.png" alt="">
-                <a href="">Track-Order</a>
-            </div>
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/cbi-image-service-prd/modified/ba796aae-6f13-4b27-8e1e-4197133ab07f.png"
+                  alt="">
+                <a href="./product.html">PRODUCTS</a>
+              </div>
             <div class="cart">
                 <img src="https://image.pngaaa.com/851/3531851-middle.png" alt="">
                 <div>
@@ -296,6 +301,7 @@
     <div class="form-box">
 
         <h2>Login Here</h2>
+        <h3 id="give" style="color: #ff0000;"></h3>
         <form>
             <div class="input-group">
                 
@@ -325,6 +331,7 @@
    
     let mail = document.getElementById("email");
     let password = document.getElementById("password");
+    let htag=document.getElementById("give")
     let form = document.querySelector("form");
     let arr = JSON.parse(localStorage.getItem("account-data"));
 
@@ -340,9 +347,10 @@
                 arr[i].password == obj1.passInp
             ) {
                alert("Sign in Successful");
-               window.location.href = "./index.html"
+               window.location.href = "./product.html"
             } else {
-                alert("Wrong Credentials");
+                htag.innerText="Fill righ information"
+                // alert("Wrong Credentials");
                 
             }
         }

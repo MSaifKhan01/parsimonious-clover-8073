@@ -1,13 +1,18 @@
 div ul li {
     list-style-type: none;
 }
+body{
+    box-sizing: border-box;
+    width: 100%;
+
+}
 
 .nav {
     display: flex;
     justify-content: space-around;
     width: 100%;
     height: 150px;
-    gap: 120px;
+    /* gap: 120px; */
     background: #232f3e;
     margin: auto;
     position: sticky;
@@ -39,7 +44,7 @@ div ul li {
     display: flex;
     max-width: 100%;
     height: 100px;
-    margin-left: 50px;
+    margin-left: 10px;
     margin-top: 25px;
 
 }
@@ -48,6 +53,7 @@ div ul li {
     display: flex;
     width: 100%;
     height: 50%;
+    margin-left: 20px;
     margin-top: 35px;
    
 }
@@ -67,7 +73,7 @@ div ul li {
     width: 420px;
     margin-left: 0x;
     margin-top: 0px;
-    height: 50px;
+    height: 48px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border: none;
@@ -190,6 +196,7 @@ div ul li {
 .sidebar {
     width: 20%;
     color: #666;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .sidebar li:hover {
@@ -209,8 +216,8 @@ div ul li {
 
 #head {
     display: grid;
-    grid-template-columns: repeat(4, 250px);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(1, 250px);
+    grid-template-rows: repeat(1, 100px);
     width: fit-content;
     margin-top: 10px;
     gap: 10px;
@@ -417,6 +424,9 @@ div ul li {
     grid-template-rows: repeat(2, 390px);
     gap: 4px;
     margin-left: 260px;
+    margin-right: 330px;
+   
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 
@@ -442,6 +452,9 @@ div ul li {
     grid-template-rows: repeat(2, 350px);
     gap: 4px;
     margin-left: 260px;
+    margin-right: 330px;
+   
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 
@@ -469,6 +482,9 @@ div ul li {
     grid-template-rows: repeat(2, 350px);
     gap: 4px;
     margin-left: 260px;
+    margin-right: 330px;
+   
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 

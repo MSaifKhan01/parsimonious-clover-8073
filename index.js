@@ -37,6 +37,7 @@
     });
 
 // data append in cart
+let arr=[]
 
     let api=(" https://63c66b68d307b7696738a8cf.mockapi.io/products")
     fectheddata()
@@ -45,8 +46,9 @@
             let request=await fetch(api)
             let data= await request.json()
             console.log(data);
-            Display(data)
-            // FilterData(data)
+            arr=data
+            Display(arr)
+            // FilterData(arr)
         }catch(err){
             console.log(err)
         }
@@ -166,72 +168,44 @@
     //   }); 
     // }
 
-//  below both function are for searching
-
-
-
-    // let inpbox=document.getElementById("search")
-
-    // inpbox.addEventListener("submit", (e) => {
-    //     e.preventDefault();
-    //     let searchParams = searchForm.search.value;
-  
-    //     let filtered = fetchedData.filter((element) => {
-    //       if (
-    //         element.name.toUpperCase().includes(inpbox.toUpperCase()) ===
-    //         true
-    //       ) {
-    //         return true;
-    //       } else {
-    //         return false;
-    //       }
-    //     });
-    //     Display(filtered);
-    //   });
-
-
-    //   let formel=document.getElementById("sform")
-    // let inpel=document.getElementById("search")
-
-    // formel.addEventListener("submit", (e) => {
-    //     e.preventDefault();
-    //     let inpel = formel.search.value;
-    //     console.log("hello1")
-  
-    //     let filtered = fectheddata.filter((element,i) => {
-    //       if (
-    //         element[i].name.toUpperCase().includes(inpel.toUpperCase()) ===
-    //         true
-    //       ) {
-    //         console.log("hello2")
-    //         return true;
-    //       } else {
-    //         console.log("hello3")
-    //         return false;
-    //       }
-    //     });
-    //     console.log("hello4")
-    //     Display(filtered);
-    //   });
-
 
 // filter part
 
-      // let filterBy = document.getElementById("filter");
-      // filterBy.addEventListener("change",()=>{
-      //   fectheddata()
-      // })
-      // function FilterData(data){
-      //   let filterValue = filterBy.value;
-      //   if(filterValue===""){
-      //     Display(data)
-      //   }else{
-      //     data=data.filter((product)=>{
-      //       return product.category == filterValue;
-      //     })
-      //     Display(data)
-      //   }
-      // }
+    //   let filterBy = document.getElementById("filter");
+    //   filterBy.addEventListener("change",()=>{
+    //     fectheddata()
+    //   })
+    //   function FilterData(data){
+    //     let filterValue = filterBy.value;
+    //     if(filterValue===""){
+    //       Display(data)
+    //     }else{
+    //       data=data.filter((product)=>{
+    //         return product.category == filterValue;
+    //       })
+    //       Display(data)
+    //     }
+    //   }
+
+    //   let inpbox=document.getElementById("sform")
+    
+
+    //   inpbox.addEventListener("submit", (e) => {
+    //       e.preventDefault();
+    //       let searchParams = inpbox.search.value;
+    
+    //       let filtered =  arr.filter((element) => {
+    //         if (
+    //           element.name.toUpperCase().includes(searchParams.toUpperCase()) ===
+    //           true
+    //         ) {
+    //           return true;
+    //         } else {
+    //           return false;
+    //         }
+    //       });
+    //       Display(filtered);
+    //     });
 
 
 

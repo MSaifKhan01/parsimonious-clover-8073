@@ -54,22 +54,22 @@
     </div>
     <div class="box1">
       <!-- <div> -->
-      <select id="filter">
-        <option value="">ALL CATEGORIES</option>
-        <option value="IB POWER BRAND">IB POWER BRAND</option>
-        <option value="  Best Sellers">BEST SELLERS</option>
-        <option value=" NEW ARRIVALS">NEW ARRIVALS</option>
-        <option value="Office Supplies">OFFICE SUPPLIES</option>
-        <option value="Power Tools">POWER TOOLS</option>
-        <option value="IT & Electronics">IT & ELECTRONIS</option>
-      </select>
-      <form action="submit" id="sform">
-        <input type="text" id="search" placeholder="Scarch Product by title, supllier, sku,category, brand etc... ">
-        <input type="submit" value="Scerch" id="scr_button" />
-      </form>
-
+          <select id="filter">
+            <option value="">ALL CATEGORIES</option>
+            <option value="IB POWER BRAND">IB POWER BRAND</option>
+            <option value="  Best Sellers">BEST SELLERS</option>
+            <option value=" NEW ARRIVALS">NEW ARRIVALS</option>
+            <option value="Office Supplies">OFFICE SUPPLIES</option>
+            <option value="Power Tools">POWER TOOLS</option>
+            <option value="IT & Electronics">IT & ELECTRONIS</option>
+          </select>
+          <form action="submit" id="sform">
+              <input type="text" id="search" placeholder="Scarch Product by title, supllier, sku,category, brand etc... ">
+              <input type="submit"  value="Scerch" id="scr_button" />
+          </form>
+          
       <!-- </div> -->
-    </div>
+  </div>
     <div class="box2">
       <div class="signin">
         <img
@@ -112,6 +112,7 @@
 
 </body>
 <script>
+  let arr=[]
 
   let API = "https://63c66b68d307b7696738a8cf.mockapi.io/products"
   async function FetchData() {
@@ -119,6 +120,7 @@
       let request = await fetch(API);
       let data = await request.json();
       console.log(data);
+      arr=data
       FilterData(data)
     } catch (err) {
       console.log(err)
@@ -209,6 +211,32 @@
   }
 
   qtyel.textContent = count;
+
+
+  
+  // let FetchData=[]
+
+    // let inpbox=document.getElementById("scr_button")
+    let inpbox=document.getElementById("sform")
+    
+
+    inpbox.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // let searchParams = document.getElementById("search").value;
+        let searchParams = inpbox.search.value;
+  
+        let filtered =  arr.filter((element) => {
+          if (
+            element.name.toUpperCase().includes(searchParams.toUpperCase()) ===
+            true
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+        DisplayProduct(filtered);
+      });
 
 
 
